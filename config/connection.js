@@ -18,3 +18,5 @@ connection.connect(function (err) {
 
     console.log('\nMySQL: Connected to Burger database as id ' + connection.threadId + '\n');
 })
+
+module.exports = connection;
