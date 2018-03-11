@@ -4,7 +4,7 @@ var connection = require("./connection");
 // Functions for MySQL Syntax
 function pushQuestionMark (num) {
     var arr = [];
-    for (let i = 0; i < num.length; i++) {
+    for (var i = 0; i < num; i++) {
         arr.push("?");  
     };
     return arr.toString();
@@ -38,23 +38,24 @@ var orm = {
     },
 
     // Function to Insert Single Entry
-    insertOneBurger: function (table, columns, values, cb) {
+    insertOneBurger: function (table, cols, vals, cb) {
         // Query String
         var queryString = "INSERT INTO " + table;
 
         queryString += " (";
-        queryString += columns.toString();
+        queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += pushQuestionMark(values.length);
+        queryString += pushQuestionMark(vals.length);
         queryString += ") ";
+
         // Test Query String
         console.log(queryString);
 
         // Query to Database
-        connection.query(queryString, values, function (err, res) {
+        connection.query(queryString, vals, function (err, res) {
             if (err) {
-                throw err;
+                console.log(err);
             };
 
             // Show callback(cb) results
