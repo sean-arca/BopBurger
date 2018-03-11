@@ -18,7 +18,7 @@ var connection = require("./connection");
 //     };
 // });
 
-// Find One Entry
+// Insert Entry
 // orm.insertOneBurger('burgers', ['burger_name', 'devoured'], ['Nom Nom Burger', false], function (data) {
 //         console.log('\nTesting Insert One Burger Function (orm.insertOneBurger)...\n');
 //         console.log("\nNew Data Row Added with ID: " + data.insertID + " \n");
