@@ -25,7 +25,7 @@ var connection = require("../config/connection");
 // });
 
 // Update Entry
-// burger.updateOneBurger({ devoured: true }, "id = 10", function (data) {
+// burger.updateOneBurger({ devoured: true }, "id = 11", function (data) {
 //     console.log('\nTesting Update One Burger Function (burger.updateOneBurger)...\n');
 //     console.log("Result: " + data.message);
 // });

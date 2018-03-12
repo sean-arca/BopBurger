@@ -19,7 +19,7 @@ var burger = {
     },
 
     // Update One Burger
-    updateOneBurger: function (objVals, id, cb) {
+    updateOneBurger: function (objVals, condition, cb) {
         orm.updateOneBurger("burgers", objVals, condition, function (res) {
             cb(res);
         });
